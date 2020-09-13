@@ -1,45 +1,53 @@
 import React, { useState } from "react";
 import TaskForm from "./TaskForm";
-import './Task.css';
-import { RiCloseCircleLine } from 'react-icons/ri'
-import { TiEdit } from 'react-icons/ti'
+import "./Task.css";
+import { Button, Grid, IconButton } from "@material-ui/core";
+import DeleteIcon from "@material-ui/icons/Delete";
 
-function Task({tasks, completeTask, removeTask, updateTask}) {
+function Task({ tasks, completeTask, removeTask, updateTask }) {
   const [edit, setEdit] = useState({
     id: null,
-    value: ''
+    value: "",
   });
 
-  const submitUpdate = value => {
+  const submitUpdate = (value) => {
     updateTask(edit.id, value);
     setEdit({
       id: null,
-      value: ''
-    })
-  }
+      value: "",
+    });
+  };
 
-  if (edit.id){
-    return <TaskForm edit={edit} onSubmit={submitUpdate}></TaskForm>
+  if (edit.id) {
+    return <TaskForm edit={edit} onSubmit={submitUpdate}></TaskForm>;
   }
 
   return tasks.map((task, index) => (
     <div
-      className={task.isComplete ? 'task-row complete' : 'task-row'}
       key={index}
+      className={task.isComplete ? "task-row complete" : "task-row"}
     >
-      <div key={task.id} onClick={() => completeTask(task.id)}>
-        {task.text}
-      </div>
-      <div className='icons'>
-        <RiCloseCircleLine
-          className='delete-icon'
-          onClick={() => removeTask(task.id)}
-        />
-        <TiEdit
-          className='edit-icon'
-          onClick={() => setEdit({id: task.id, value: task.text})}
-        />
-      </div>
+      <Grid container justify="center" spacing={1}>
+        <Grid item xs={6}>
+          <Button
+            className="task-button"
+            variant="contained"
+            key={task.id}
+            onClick={() => completeTask(task.id)}
+          >
+            {task.text}
+          </Button>
+        </Grid>
+        <Grid item xs={1}>
+          <IconButton
+            className="delete-button"
+            aria-label="delete"
+            onClick={() => removeTask(task.id)}
+          >
+            <DeleteIcon fontSize="small" />
+          </IconButton>
+        </Grid>
+      </Grid>
     </div>
   ));
 }
