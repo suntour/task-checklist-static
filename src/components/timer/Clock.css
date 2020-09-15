@@ -1,0 +1,21 @@
+.date-area {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  padding: 0.4em;
+}
+
+.date-area {
+  font-size: 3.5em;
+  color: #6f73d2;
+  height: auto;
+}
+
+.date-area .offset-text {
+  font-size: 0.4em;
+}
+.date-area .reset-section {
+  margin:0.4em;
+}
+.date-area .reset-text {
+  font-size:0.6em;
+}

@@ -33,20 +33,31 @@ function TaskList() {
   };
 
   const updateTask = (taskId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
+    if (!newValue || /^\s*$/.test(newValue)) {
       return;
     }
+    var updatedTasks = tasks.map((item) => {
+      if (item.id === taskId) {
+        item.text = newValue;
+      }
+      return item;
+    });
+    setTasks(updatedTasks);
+  };
 
-    setTasks((prev) =>
-      prev.map((item) => (item.id === taskId ? newValue : item))
-    );
+  const resetTasks = (e) => {
+    let resettedTasks = tasks.map((t) => {
+      t.isComplete = false;
+      return t;
+    });
+
+    setTasks(resettedTasks);
   };
 
   return (
     <div className="header">
-      <h1>Task Checklist</h1>
       <Paper className="form-area">
-        <TaskForm onSubmit={addTask}></TaskForm>
+        <TaskForm onSubmit={addTask} resetTasks={resetTasks}></TaskForm>
       </Paper>
       <div className="scroll-area">
         <Task

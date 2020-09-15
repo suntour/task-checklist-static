@@ -5,16 +5,23 @@
   text-align: center;
 }
 
-.App .main-section {
+.App .task-section {
   margin: 1em;
   padding: 1em;
-  background-color: #f6f3f6;
+  background-color: rgba(255, 255, 255, 0.80);
   height: 50em;
 }
 
+.App .time-section {
+  margin: auto;
+  margin-top: 2em;
+  display: inline-block;
+  width: 80%;
+}
+
 body {
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
   background-color: #bbbbdd;
   background-position: center bottom;
   background-repeat: no-repeat;
