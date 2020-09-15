@@ -3,5 +3,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This is a small project to familiarize myself with React syntax.
 
 Upcoming changes:
-- Resets tasks at chosen time, daily, weekly etc.
-- Keep state after leaving the page.
+- Keep state after leaving the page. (I intend to upload this on github pages, so for now state won't be a consideration.)
