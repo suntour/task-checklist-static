@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/task-checklist-static/static/css/main.f9ba01e9.chunk.css",
+    "main.js": "/task-checklist-static/static/js/main.60790ce5.chunk.js",
+    "main.js.map": "/task-checklist-static/static/js/main.60790ce5.chunk.js.map",
+    "runtime-main.js": "/task-checklist-static/static/js/runtime-main.1f1d1213.js",
+    "runtime-main.js.map": "/task-checklist-static/static/js/runtime-main.1f1d1213.js.map",
+    "static/js/2.15dfc25f.chunk.js": "/task-checklist-static/static/js/2.15dfc25f.chunk.js",
+    "static/js/2.15dfc25f.chunk.js.map": "/task-checklist-static/static/js/2.15dfc25f.chunk.js.map",
+    "index.html": "/task-checklist-static/index.html",
+    "precache-manifest.3d3fe0df639353dd2e970ef0d4fb974c.js": "/task-checklist-static/precache-manifest.3d3fe0df639353dd2e970ef0d4fb974c.js",
+    "service-worker.js": "/task-checklist-static/service-worker.js",
+    "static/css/main.f9ba01e9.chunk.css.map": "/task-checklist-static/static/css/main.f9ba01e9.chunk.css.map",
+    "static/js/2.15dfc25f.chunk.js.LICENSE.txt": "/task-checklist-static/static/js/2.15dfc25f.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/task-checklist-static/static/media/el_nath_market.b842e0e1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1f1d1213.js",
+    "static/js/2.15dfc25f.chunk.js",
+    "static/css/main.f9ba01e9.chunk.css",
+    "static/js/main.60790ce5.chunk.js"
+  ]
+}
