@@ -6,6 +6,7 @@ function FormattedDate(props) {
   var resetHour = Math.floor((props.timeTilReset / (1000 * 60 * 60)) % 24);
   var resetMinutes = Math.floor((props.timeTilReset / 1000 / 60) % 60);
   var resetSeconds = Math.floor((props.timeTilReset / 1000) % 60);
+  //var resetSeconds = (props.timeTilReset / 1000);
 
   return (
     <div>
@@ -46,7 +47,7 @@ function getTimeTilResetInMillis(currentDate) {
     }
     newDate.setHours(hours);
     newDate.setMinutes(0);
-    newDate.setMilliseconds(0);
+    newDate.setSeconds(0);
 
     return newDate;
   }
